@@ -132,9 +132,18 @@ components:
   schemas:
     project:
       example:
+        companyNumber: companyNumber
+        directorName: directorName
+        registeredOfficePostcode: registeredOfficePostcode
         projectDescription: projectDescription
+        outputType: outputType
+        registeredOfficeCity: registeredOfficeCity
+        currency: currency
         _id: _id
         projectName: projectName
+        serviceProviderName: serviceProviderName
+        countryRegistration: countryRegistration
+        registeredOfficeAddress: registeredOfficeAddress
       properties:
         _id:
           type: string
@@ -142,7 +151,34 @@ components:
           type: string
         projectDescription:
           type: string
+        serviceProviderName:
+          type: string
+        directorName:
+          type: string
+        countryRegistration:
+          type: string
+        companyNumber:
+          type: string
+        registeredOfficeAddress:
+          type: string
+        registeredOfficePostcode:
+          type: string
+        registeredOfficeCity:
+          type: string
+        outputType:
+          type: string
+        currency:
+          type: string
       required:
+      - companyNumber
+      - countryRegistration
+      - currency
+      - directorName
+      - outputType
       - projectDescription
       - projectName
+      - registeredOfficeAddress
+      - registeredOfficeCity
+      - registeredOfficePostcode
+      - serviceProviderName
       type: object
